@@ -89,18 +89,22 @@ char	*get_next_line(int fd)
 	rest[fd] = true_line(line);
 	return (line);
 }
-/*
+
 int	main(void)
 {
-	int i = 0;
 	char *s = "h";
-	int fd = open ("./tests/lines_around_10.txt", O_RDONLY);
+	char *t = "k";
+	int fd = open ("../tests/lines_around_10.txt", O_RDONLY);
+	int fd2 = open ("../tests/bee.txt", O_RDONLY);
 	while (s)
 	{
 		s = get_next_line(fd);
+		t = get_next_line(fd2);
 		printf("%s", s);
-		i++;
+		printf("%s", t);
 		free(s);
+		free(t);
 	}
 	close(fd);
-}*/
+	close(fd2);
+}

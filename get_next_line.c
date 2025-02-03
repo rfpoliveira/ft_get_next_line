@@ -86,7 +86,7 @@ char	*get_next_line(int fd)
 	rest = true_line(line);
 	return (line);
 }
-/*
+
 int	main(void)
 {
 	char *s = "h";
@@ -100,4 +100,4 @@ int	main(void)
 	}
 	printf("%s", s);
 	close(fd);
-}*/
+}
